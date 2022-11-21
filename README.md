@@ -1,2 +1,2 @@
 # C
-fibonacci series
+All basics question solutions in C language 
