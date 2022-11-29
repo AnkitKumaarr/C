@@ -1,26 +1,27 @@
 #include<stdio.h>
 #include<conio.h>
+int arm(int x);
 void main(){
+	int n;
 	clrscr();
-	int n, temp, sum=0, cube, r;
-	printf("Enter a number to check its Armstrong or not\n");
-	scanf("%d",&n);
-	temp = n;
-	while(n>0){
-		r = n%10;
-		printf(" r = %d\n",r);
-		cube = r*r*r;
-		printf("cube = %d\n",cube);
-		sum = sum +cube;
-		printf("sum = %d\n",sum);
-		n= n/10;
-		printf(" n = %d\n",n);
-	}
-	if(temp == sum){
-		printf("number is Armstrong number");
-	}
-	else{
-		printf("number is not Armstrong number");
-	}
+	arm(n);
 	getch();
+}
+int arm(int n){
+	int a,temp,i,rem,sum=0;
+	clrscr();
+	printf("Enter a number   : ");
+	scanf("%d",&a);
+	temp = a;
+	for(i =a;i!=0;i=i/10){
+		rem = i%10;
+		sum =sum + rem*rem*rem;
+		printf("rem = %d\nsum = %d\n",rem,sum);
+		}
+	if(temp==sum){
+		printf("The number is Armstrong Number");
+		}
+	else{
+		printf("The number is not Armstrong Number");
+	}
 }
